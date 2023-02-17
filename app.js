@@ -5,7 +5,11 @@ document.querySelector('#all-clear').addEventListener('click', () => {
 });
 
 document.querySelector('#delete').addEventListener('click', ()  => {
-    displayInput.value = displayInput.value.toString().slice(0, -1)
+        if(displayInput.value.includes("Error")) {
+            displayInput.value = ``;
+        } else {
+            displayInput.value = displayInput.value.toString().slice(0, -1)
+        }
 });
 
 document.querySelector('#evaluate').addEventListener('click', () => {
