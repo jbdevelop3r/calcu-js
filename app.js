@@ -17,6 +17,6 @@ document.querySelector('#evaluate').addEventListener('click', () => {
           displayInput.value = resultValue.toString(); 
         }
       } catch (err) {
-        setResult("Error");
+        displayInput.value = `Error`;
     }  
 });
